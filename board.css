@@ -9,3 +9,7 @@
     transition: .25s ease-in;
     transform: scale(1.5);
 }
+
+.square {
+    color: black;
+}
