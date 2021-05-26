@@ -19,6 +19,45 @@
     </main>
     
 </body>
-<script src="board.js"></script>
+<!-- <script src="board.js"></script> -->
 <script src="jquery-3.6.0.js"> </script>
+<script>
+
+    $(document).ready(()=> {
+        // alert("Hello! Using JQuery"s)
+        console.log("Hello")
+    
+    let squaresTicTacToe = $('.square')
+    console.dir(squaresTicTacToe)
+
+    $.each(squaresTicTacToe, element => {
+        $(".square").click(function() {
+            // console.log("you clicked me")
+            $(".square").css({'font-size':'80px', 'text-align':'center'});
+        })
+    
+    // $.fn.myFunction = function(){ 
+    //     alert('You have successfully defined the function!'); 
+    // }
+    // $(".call-btn").click(function(){
+    //     $.fn.myFunction();
+    // });
+
+    $.fn.blueBackground = function(gameSquare){
+        $gameSquare.css("background-color","lightblue")
+    }
+
+    $(document).keypress(function(event) {
+        if(event.which == 13) {
+            console.log("hello")
+            $playerInput = $('.square').value;
+            if ($playerInput == "X" || $playerInput == "x") {
+                $.fn.blueBackground(element)
+            }
+        }
+    })
+    })
+})
+</script>
+
 </html>
